@@ -10,7 +10,6 @@
 
 
 header {
-  height: 25%;
   background-color: transparent;
   color: #D5C7BC;
   text-align: center;
@@ -110,6 +109,7 @@ body {
   font-family: 'Secular One', cursive;
   transform: translateX(-160%);
   transition: transform 1s ease-in-out; 
+  overflow: scroll;
 }
 
 .modal-container.visible {
@@ -122,7 +122,7 @@ body {
   text-align: center;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+
 }
 
 
@@ -161,7 +161,6 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .column {
