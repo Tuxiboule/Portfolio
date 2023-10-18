@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+  height: 25%;
+  background-color: transparent;
+  color: #D5C7BC;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  cursor: none;
+  
+}
+
+.title {
+  font-size: 70px;
+  margin: 0;
+  color: #D5C7BC;
+}
+
+html, body{
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color:  #D5C7BC;
+  min-height: 100vh;
+  cursor: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.gravityButton {
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  text-align: center;
+  & > button {
+    font: inherit;
+    width: 300px;
+    aspect-ratio: 1;
+    background: none;
+    border: none;
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    opacity: var(--opacity, 0.25);
+    cursor: none;
+    transition: all 0.15s ease-out;
+    text-align: center;
+    &:hover, &:focus-visible {
+      --_fill: var(--color, #fff);
+    }
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+      opacity: 1;
+    }
+    }
+}
+
+.buttonIcon {
+  width: 50%;
+  fill: var(--_fill, transparent);
+  transition: fill 0.5s;
+}
+
+
+.aura {
+  z-index: 1000;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at center,  #ffffff, transparent 20%); 
+    border-radius: 10%;
+    pointer-events: none;
+    display: none;
+    flex: 1;
+
+}
+
+.modal-container {
+  height: 100%;
+  z-index: 2;
+  left: 33%;
+  justify-content: center;
+  position: absolute;
+  width: auto;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Secular One', cursive;
+  transform: translateX(-160%);
+  transition: transform 1s ease-in-out; 
+}
+
+.modal-container.visible {
+  transform: translateX(0);
+  left: 33%;
+}
+.modal-content {
+  background-color: #93B7BE;
+  padding: 10px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+#divModalContact.modal-content {
+  background-color: #676400;
+}
+
+#divModalPortfolio.modal-content {
+  background-color: #F79234;
+}
+
+#modalContact.modal-container {
+  left: 0;
+  width: 100%;
+  transform : translateX(160%);
+}
+
+#modalContact.modal-container.visible {
+  left: 0;
+  transform: translateX(0);
+  
+}
+
+.cls-1,.cls-2{
+  stroke:#000;stroke-miterlimit:10;
+}
+.cls-1{
+  stroke-width:16px;
+}
+.cls-2{
+  stroke-width:12px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.column {
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 0;
+  transition: height 1s ease;
+  overflow: visible;
+}
+
+.column:hover {
+  background-color: #93B7BE;
+  height: 100%;
+}
+
+
+.column1:hover {
+  background-color: #F79234;
+}
+
+.column2:hover {
+  background-color: #9E9DFF;
+}
+
+.column3:hover {
+  background-color: #676400;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10vmin;
+  font-family: 'Secular One', cursive;
+  text-transform: uppercase;
+}
+
+.overlap{
+  --overlap: .15ch;
+  --shadow-offset: .1ch;
+  --shadow-blur: .2ch;
+  --shadow-color: #000000;
+  letter-spacing: calc(var(--overlap) * -1); 
+  isolation: isolate;
+}
+.overlap-front { --mult: 1; }
+.overlap-back { --mult: -1; }
+
+.overlap>span { 
+  position: relative;
+  z-index: calc(var(--index, 1) * var(--mult, 1));
+}
+.overlap-front,
+.overlap-back{
+  text-shadow: 
+    calc(var(--mult, 1) * var(--shadow-offset,0) * -1) 0 
+    var(--shadow-blur, 0) 
+    var(--shadow-color, black);
+}
+.github-projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  grid-gap: 10px; /* Espace entre les éléments */
+  list-style: none; /* Supprime les puces de la liste */
+  padding: 0; /* Supprime le remplissage de la liste */
+}
+
+.github-projects-list li {
+  /* Styles pour les éléments de la liste (liens) */
+  margin: 0; /* Supprime la marge par défaut des éléments de liste */
+}
+
+.readme-content {
+  text-align: left;
+}
+
+.readme-content h1{
+  text-align: center;
+  font-size: 200%;
+}
+
+.project-container {
+  overflow: auto; /* Activer le défilement si le contenu dépasse la taille du conteneur */
+  max-height: 380px; /* Définissez la hauteur maximale du conteneur, ajustez-la selon vos besoins */
+}
