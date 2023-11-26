@@ -5,7 +5,7 @@
 ## About
 
 - A website developed in HTML5 / CSS3 / JavaScript, serving as my portfolio.
-- Fell free to use it.
+- Feel free to use it.
 
 ## Features
 
